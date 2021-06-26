@@ -13,7 +13,7 @@
 ## 快速上手
 目前项目已经使用了插件。直接运行SPIMain中的main方法，会发现打印的内容是：
 
-![结果](resource/provider.png)
+![结果](https://github.com/zhifeiyv666/SPISample/blob/master/resource/provider.png)
 
 
 如果移除SPIMain中的
@@ -28,7 +28,7 @@
     
 重新运行会打印
 
-![结果](resource/default.png)
+![结果](https://github.com/zhifeiyv666/SPISample/blob/master/resource/default.png)
     
 ## 扩展说明
 可以在SPIMain中更换不同的具体实现，只需要通过更改maven依赖即可换成自己的日志插件，而无需修改任何代码。
