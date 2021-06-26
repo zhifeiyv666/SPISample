@@ -10,30 +10,30 @@
     - SPIServiceProvider 一个符合SPIService中接口定义的规约的具体实现。
 
 ## 快速上手
-    目前项目已经使用了插件。直接运行SPIMain中的main方法，会发现打印的内容是：
+目前项目已经使用了插件。直接运行SPIMain中的main方法，会发现打印的内容是：
     """
     Logback : (red)有趣
     Logback : interesting
     """
-    如果移除SPIMain中的
+如果移除SPIMain中的
     """
-            <dependency>
+        <dependency>
             <groupId>store.xiaowei</groupId>
             <artifactId>SPIServiceProvider</artifactId>
             <version>1.0.0</version>
         </dependency>
     """
-    重新运行会打印
+重新运行会打印
     """
     (red)有趣
     interesting
     """
     
 ## 扩展说明
-    可以在SPIMain中更换不同的具体实现，只需要通过更改maven依赖即可换成自己的日志插件，而无需修改任何代码。
+可以在SPIMain中更换不同的具体实现，只需要通过更改maven依赖即可换成自己的日志插件，而无需修改任何代码。
 
 ## 核心方法
     """
      ServiceLoader<Logger> loader = ServiceLoader.load(Logger.class);
      """
-     并且具体的插件实现的资源文件夹下要有META-INF/services文件夹，文件夹内有命名为上述方法加载的类的全名的文件，文件内容为实现上述接口的类的全称
+并且具体的插件实现的资源文件夹下要有META-INF/services文件夹，文件夹内有命名为上述方法加载的类的全名的文件，文件内容为实现上述接口的类的全称
