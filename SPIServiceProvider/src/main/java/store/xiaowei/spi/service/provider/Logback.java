@@ -12,6 +12,6 @@ public class Logback implements Logger {
 
     @Override
     public void debug(String msg) {
-        System.out.println("\u001b[31m Logback : " + msg + "\u001b[0m");
+        System.out.println("\u001b[31mLogback : " + msg + "\u001b[0m");
     }
 }
